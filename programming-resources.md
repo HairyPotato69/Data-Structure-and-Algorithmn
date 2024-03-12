@@ -20,7 +20,7 @@
         - [Harvard's CS50 Python Course](https://www.youtube.com/watch?v=nLRL_NcnK-4&t=16448s)
             - Uploaded on 1st May 2023
             - 16 hours long
-            - Taught my Dr. David J. Malan
+            - Taught by Dr. David J. Malan
 3. HTML && CSS
     1. **Websites**
         - [W3school](https://www.w3schools.com/) 
