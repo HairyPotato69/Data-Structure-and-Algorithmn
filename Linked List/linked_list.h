@@ -46,7 +46,7 @@ namespace doubly {
 		Linked_List();
 		int get_size();
 		bool isEmpty();
-		bool isUpperLower(int index);
+		bool isUpperLower(const int index);
 		Node* find_node(int index);
 
 		// insert node

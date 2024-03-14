@@ -114,7 +114,6 @@ bool singly::Linked_List::insert(const type data) {
 	return 1;
 }
 
-
 void singly::Linked_List::front(type& value) {
 	value = head->get_data();
 }
@@ -186,4 +185,59 @@ void singly::Linked_List::print() {
 		node = find_node(count);
 	}
 
+}
+
+
+doubly::Linked_List::Linked_List() {
+	head = NULL;
+	tail = NULL;
+}
+
+int doubly::Linked_List::get_size() {
+	return size;
+}
+
+bool doubly::Linked_List::isEmpty() {
+	if (size == 0)
+		return 1;
+	else
+		return 0;
+}
+
+bool doubly::Linked_List::isUpperLower(const int index) {
+	// true if upper
+	if (index > size / 2)
+		return 1;
+	else
+		return 0;
+}
+
+doubly::Node* doubly::Linked_List::find_node(int index) {
+	if (index > size || index < 0)
+		return NULL;
+
+	// if upper
+	if (isUpperLower(index)) {
+		doubly::Node* current_node = tail;
+		index = (size - index) + 1;
+		for (int count{ 1 }; count < index; count++)
+			current_node = current_node->get_prev();
+		return current_node;
+	}
+	// if lower
+
+	doubly::Node* current_node = head;
+	for (int count{ 1 }; count < index; count++)
+		current_node = current_node->get_next();
+
+	return current_node;
+}
+
+
+void doubly::Linked_List::push(const type data) {
+	doubly::Node* new_node = new doubly::Node(data);
+	if (isEmpty()) {
+		head = new_node;
+		tail = new_node;
+	}
 }
