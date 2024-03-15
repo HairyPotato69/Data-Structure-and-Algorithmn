@@ -47,3 +47,8 @@ void doubly::Node::set_data(const type data) {
 void doubly::Node::set_next(Node* next) {
 	this->next = next;
 }
+
+void doubly::Node::set_prev(Node* prev)
+{
+	this->previous = prev;
+}

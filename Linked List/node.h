@@ -33,6 +33,7 @@ namespace doubly {
 		Node* get_next();
 		Node* get_prev();
 		void set_next(Node* next);
+		void set_prev(Node* prev);
 		void set_data(const type data);
 	};
 }
