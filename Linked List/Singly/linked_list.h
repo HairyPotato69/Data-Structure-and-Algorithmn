@@ -4,13 +4,12 @@
 #include "node.h"
 #include <cstdlib> // #include <stdlib.h>
 
-	class Linked_List {
+class Linked_List {
 	private:
 		Node* head{};
 		Node* tail{};
 		int size{};
 	public:
-
 		Linked_List();
 		int get_size();
 		bool isEmpty();
