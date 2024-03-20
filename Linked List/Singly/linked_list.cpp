@@ -30,7 +30,6 @@ Node* Linked_List::find_node(const int index) {
 }
 
 void Linked_List::push(Node* new_node) {
-	// Node* new_node = new Node(data);
 
 	if (isEmpty()) {
 		head = new_node;
@@ -45,7 +44,6 @@ void Linked_List::push(Node* new_node) {
 }
 
 void Linked_List::push_back(Node* new_node) {
-	// Node* new_node = new Node(data);
 
 	if (size == 0) {
 		head = new_node;
@@ -150,14 +148,6 @@ void Linked_List::pop_front() {
 
 	delete node;
 }
-
-//
-//void Linked_List::pop_back() {
-//	Node* last_node{ head };
-//	for (int count{ 1 }; count < size - 1; count++) {
-//
-//	}
-//}
 
 bool Linked_List::remove(const int index){
 
