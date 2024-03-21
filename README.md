@@ -13,6 +13,8 @@ This repository serves as a reference for DSA.
 It is the fundamental data structure and should be mastered before venturing into other structures. Once this is mastered, you think think of other structures as linked list but with _extra steps_.
 ![basic linked list](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/linked%20list.png)
 _basic linked list_
+![doubly linked list](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/basic%20linked%20list%20drawing.png)
+_doubly linked list_
 
 **Why?**
 1. Dynamic data structure
