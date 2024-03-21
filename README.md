@@ -11,7 +11,7 @@ This repository serves as a reference for DSA.
 # Data Strucutures
 ## Linked List
 It is the fundamental data structure and should be mastered before venturing into other structures. Once this is mastered, you think think of other structures as linked list but with _extra steps_.
-![basic linked list](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked list/linked%20list.png)
+![basic linked list](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked-list/linked%20list.png)
 _basic linked list_
 
 **Why?**
