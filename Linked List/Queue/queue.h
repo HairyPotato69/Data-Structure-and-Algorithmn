@@ -4,11 +4,12 @@
 // Uses the same node from singly linked list
 #include "node.h"
 
-class queue{
+class Queue{
     private:
         int size{};
         Node* head{};
     public:
+        Queue();
         bool dequeue(type data);
         bool enqueue();
         bool isEmpty();
