@@ -17,8 +17,8 @@ class Linked_List{
 		Node* find_node(int index);
 
 		// insert node
-		void push(doubly::Node* new_node);
-		void push_back(doubly::Node* new_node);
+		void push(Node* new_node);
+		void push_back(Node* new_node);
 		bool insert(int index, const type data);
 		bool insert(const type data);
 		// get data
