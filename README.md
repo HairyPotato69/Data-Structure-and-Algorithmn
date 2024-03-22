@@ -13,6 +13,8 @@ This repository serves as a reference for DSA.
   - [Linked list](#linked-list)
   - [Queue](#queue)
   - [Stack](#stack)
+  - [Tree](#tree)
+- [Algorithms](#Algorithms)
 
 # Data Structures
 ## Linked List
