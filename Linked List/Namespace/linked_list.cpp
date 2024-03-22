@@ -1,4 +1,4 @@
-#include "linked_list.h"
+#include "linked_list.hpp"
 #include <iostream>
 
 singly::Linked_List::Linked_List(){
