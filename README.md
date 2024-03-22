@@ -11,6 +11,8 @@ This repository serves as a reference for DSA.
 # Topics
 - ![Data Structures](#data-structures)
   - ![Linked list](#linked-list)
+  - ![Queue](#queue)
+  - ![Stack](#stack)
 
 # Data Structures
 ## Linked List
