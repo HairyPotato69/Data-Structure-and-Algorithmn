@@ -1,15 +1,15 @@
 #include "queue.hpp"
 #include <iostream>
 
-linked_list::queue::queue::queue() {
+queue::queue() {
 	head = NULL;
 }
 
-bool linked_list::queue::queue::dequeue(type& data) {
+bool queue::dequeue(type& data) {
 	
 	if (isEmpty())
 		return 0;
-	single_node::Node* first_node{ head };
+	Node* first_node{ head };
 
 	if (get_size() == 1) {
 		data = first_node->get_data();
@@ -27,9 +27,9 @@ bool linked_list::queue::queue::dequeue(type& data) {
 	return 1;
 }
 
-bool linked_list::queue::queue::enqueue(const type data) {
-	single_node::Node* new_node(new single_node::Node(data));
-	single_node::Node* current_node{ nullptr };
+bool queue::enqueue(const type data) {
+	Node* new_node(new Node(data));
+	Node* current_node{ nullptr };
 	if (!new_node)
 		return 0;
 
@@ -48,17 +48,17 @@ bool linked_list::queue::queue::enqueue(const type data) {
 	return 1;
 }
 
-bool linked_list::queue::queue::isEmpty() {
+bool queue::isEmpty() {
 	if (size == 0)
 		return 1;
 	return 0;
 }
 
-int linked_list::queue::queue::get_size() {
+int queue::get_size() {
 	return size;
 }
 
-bool linked_list::queue::queue::peek(type& data) {
+bool queue::peek(type& data) {
 	if (isEmpty())
 		return 0;
 
