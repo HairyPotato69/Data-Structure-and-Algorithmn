@@ -2,7 +2,7 @@
 #define queue_type 
 
 // Uses the same node from singly linked list
-#include "node.h"
+#include "node.hpp"
 
 class Queue{
     private:
