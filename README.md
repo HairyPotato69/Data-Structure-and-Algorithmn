@@ -58,8 +58,8 @@ _basic linked list_
 
 ## Queue
 ![Basic queue](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/queue.png)
-It is essentially linked list but with restrictions. Queue has FIFO (_first in first out_) and LILO (_last in last out_) characteristics. 
-For example, the first data your insert into a queue will also be the first data to leave the queue. 
+It is essentially linked list but with restrictions. Queue has FIFO (_first in first out_) and LILO (_last in last out_) characteristics. <br>
+For example, the first data you insert into a queue will also be the first data to leave the queue. 
 To put into perspective, imagine a queue at a cinema. The first person to enter the queue will be the first to enter/leave. _simple queue_ 
 
 **Types of Queue**
@@ -75,5 +75,20 @@ To put into perspective, imagine a queue at a cinema. The first person to enter 
 2. Dequeue: Removing the node at the front of the queue and return its value
 3. isEmpty: Determine if the queue is empty
 4. Peek: Retrieving the value of the front node without removing it
+
+## Stack
+![Basic Stack](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/stack.png)
+It is also a linked list but with restriction. Stack has FILO (_first in last out_) and LIFO (_last in first out_) characteristics. <br>
+For example, the first data you insert into a stack will be the last data to leave the stack. 
+To put into perspective, imagine a pile of clothes. You add clothes to the top of the stack (_most recently added data/last in_) and take clothes from the top of the stack (_first out_)
+
+**Basic operations**
+1. push: Adding node to the top of the stack
+2. pop: Removing the node from the top of the stack and return its value
+3. top: Retrieving the value of the top most node of the stack without removing it
+4. isEmpty: Determine if the stack is empty
+5. size: Determine the number of nodes in the stack
+
+## Tree
 
 # Algorithms
