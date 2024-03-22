@@ -264,16 +264,8 @@ bool linked_list::doubly::Linked_List::insert(int index, const type data) {
 
 	if (isUpperLower(index))
 		current_node = find_node(index);
-		// prev_node = find_node(index + 1);
-
-		/*Delete later*/
-		//new_node->set_next(current_node);
-		//new_node->set_prev(prev_node);
-		//prev_node->set_next(new_node);
-		//current_node->set_prev(new_node);
 	else 
 		current_node = find_node(index);
-		// prev_node = find_node(index - 1);
 
 	prev_node = current_node->get_prev();
 
@@ -479,6 +471,9 @@ bool linked_list::queue::queue::peek(type& data) {
 	return 1;
 }
 
+// !!! Queue !!!
+
+// !!! Stack !!!
 
 linked_list::stack::stack::stack() {
 	head = NULL;
@@ -539,3 +534,4 @@ bool linked_list::stack::stack::isEmpty() {
 int linked_list::stack::stack::get_size() {
 	return size;
 }
+// !!! Stack !!!
