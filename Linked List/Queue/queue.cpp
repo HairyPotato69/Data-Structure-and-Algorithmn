@@ -1,4 +1,4 @@
-#include "queue.h"
+#include "queue.hpp"
 #include <iostream>
 
 int Queue::getSize(){
