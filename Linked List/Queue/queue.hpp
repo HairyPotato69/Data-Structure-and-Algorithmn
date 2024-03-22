@@ -10,8 +10,9 @@ class Queue{
         Node* head{};
     public:
         Queue();
-        bool dequeue(type data);
-        bool enqueue();
+        bool dequeue(type& data);
+        bool enqueue(const type data);
+        bool peek(type& data);
         bool isEmpty();
         int getSize();
 };
