@@ -10,6 +10,7 @@ This repository serves as a reference for DSA.
 
 # Topics
 - ![Data Structures](#data-structures)
+  - ![Linked list](#linked-list)
 
 # Data Structures
 ## Linked List
