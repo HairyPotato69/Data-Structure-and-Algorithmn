@@ -1,27 +1,28 @@
-#include "linked_list.h"
+#include "linked_list.hpp"
 #include <iostream>
 
-singly::Linked_List::Linked_List(){
+// !!! Singly !!!
+linked_list::singly::Linked_List::Linked_List(){
 	head = NULL;
 	tail = NULL;
 }
 
-int singly::Linked_List::get_size(){
+int linked_list::singly::Linked_List::get_size(){
 	return size;
 }
 
-bool singly::Linked_List::isEmpty() {
+bool linked_list::singly::Linked_List::isEmpty() {
 	if (size == 0)
 		return 1;
 	else
 		return 0;
 }
 
-singly::Node* singly::Linked_List::find_node(const int index) {
+single_node::Node* linked_list::singly::Linked_List::find_node(const int index) {
 	if (Linked_List::isEmpty() || index < 1 || index > size)
 		return NULL;
 
-	singly::Node* current_node{ head };
+	single_node::Node* current_node{ head };
 	
 	for (int count{ 1 }; count < index; count++) 
 		current_node = current_node->get_next();
@@ -29,8 +30,8 @@ singly::Node* singly::Linked_List::find_node(const int index) {
 	return current_node;
 }
 
-void singly::Linked_List::push(singly::Node* new_node) {
-	// singly::Node* new_node = new singly::Node(data);
+void linked_list::singly::Linked_List::push(single_node::Node* new_node) {
+	// single_node::Node* new_node = new single_node::Node(data);
 
 	if (isEmpty()) {
 		head = new_node;
@@ -44,7 +45,7 @@ void singly::Linked_List::push(singly::Node* new_node) {
 	size++;
 }
 
-void singly::Linked_List::push_back(singly::Node* new_node) {
+void linked_list::singly::Linked_List::push_back(single_node::Node* new_node) {
 	// singly::Node* new_node = new singly::Node(data);
 
 	if (size == 0) {
@@ -57,8 +58,8 @@ void singly::Linked_List::push_back(singly::Node* new_node) {
 	size++;
 }
 
-bool singly::Linked_List::insert(int index, const type data) {
-	singly::Node* new_node{ new singly::Node(data) };
+bool linked_list::singly::Linked_List::insert(int index, const type data) {
+	single_node::Node* new_node{ new single_node::Node(data) };
 
 	if (index - size > 1)
 		return 0;
@@ -73,8 +74,8 @@ bool singly::Linked_List::insert(int index, const type data) {
 		return 1;
 	}
 
-	singly::Node* prev_node { find_node(index - 1) };
-	singly::Node* next_node { prev_node->get_next() };
+	single_node::Node* prev_node { find_node(index - 1) };
+	single_node::Node* next_node { prev_node->get_next() };
 
 	prev_node->set_next(new_node);
 	new_node->set_next(next_node);
@@ -85,8 +86,8 @@ bool singly::Linked_List::insert(int index, const type data) {
  }
 
 // This only works if the list has already been arranged in order
-bool singly::Linked_List::insert(const type data) {
-	singly::Node* new_node{ new singly::Node(data) };
+bool linked_list::singly::Linked_List::insert(const type data) {
+	single_node::Node* new_node{ new single_node::Node(data) };
 	if (isEmpty()) {
 		push(new_node);
 		return 1;
@@ -97,8 +98,8 @@ bool singly::Linked_List::insert(const type data) {
 		return 1;
 	}
 
-	singly::Node* prev_node{ head };
-	singly::Node* current_node{ head->get_next() };
+	single_node::Node* prev_node{ head };
+	single_node::Node* current_node{ head->get_next() };
 
 	while (current_node != NULL) {
 		if (current_node->get_data() > data)
@@ -114,15 +115,15 @@ bool singly::Linked_List::insert(const type data) {
 	return 1;
 }
 
-void singly::Linked_List::front(type& value) {
+void linked_list::singly::Linked_List::front(type& value) {
 	value = head->get_data();
 }
 
-void singly::Linked_List::back(type& value) {
+void linked_list::singly::Linked_List::back(type& value) {
 	value = tail->get_data();
 }
 
-bool singly::Linked_List::value_at(const int index, type& value) {
+bool linked_list::singly::Linked_List::value_at(const int index, type& value) {
 	if (isEmpty() || index > size || index < 0)
 		return 0;
 	if (index == 1) {
@@ -138,8 +139,8 @@ bool singly::Linked_List::value_at(const int index, type& value) {
 	return 1;
 }
 
-void singly::Linked_List::pop_front() {
-	singly::Node* node{ head };
+void linked_list::singly::Linked_List::pop_front() {
+	single_node::Node* node{ head };
 	head = head->get_next();
 
 	if (size == 1) {
@@ -151,15 +152,7 @@ void singly::Linked_List::pop_front() {
 	delete node;
 }
 
-//
-//void singly::Linked_List::pop_back() {
-//	singly::Node* last_node{ head };
-//	for (int count{ 1 }; count < size - 1; count++) {
-//
-//	}
-//}
-
-bool singly::Linked_List::remove(const int index){
+bool linked_list::singly::Linked_List::remove(const int index){
 
 	if (isEmpty() || index < 0 || index > size)
 		return 0;
@@ -169,8 +162,8 @@ bool singly::Linked_List::remove(const int index){
 		return 1;
 	}
 
-	singly::Node* previous = find_node(index-1);
-	singly::Node* node = previous->get_next();
+	single_node::Node* previous = find_node(index-1);
+	single_node::Node* node = previous->get_next();
 
 	previous->set_next(node->get_next());
 	delete node;
@@ -179,32 +172,35 @@ bool singly::Linked_List::remove(const int index){
 
 }
 
-void singly::Linked_List::print() {
-	singly::Node* node{ nullptr };
+void linked_list::singly::Linked_List::print() {
+	single_node::Node* node{ nullptr };
 	for (int count{ 1 }; count <= size; count++) {
 		node = find_node(count);
 	}
 
 }
 
+// !!! Singly !!!
 
-doubly::Linked_List::Linked_List() {
+// !!! Doubly !!!
+
+linked_list::doubly::Linked_List::Linked_List() {
 	head = NULL;
 	tail = NULL;
 }
 
-int doubly::Linked_List::get_size() {
+int linked_list::doubly::Linked_List::get_size() {
 	return size;
 }
 
-bool doubly::Linked_List::isEmpty() {
+bool linked_list::doubly::Linked_List::isEmpty() {
 	if (size == 0)
 		return 1;
 	else
 		return 0;
 }
 
-bool doubly::Linked_List::isUpperLower(int& index) {
+bool linked_list::doubly::Linked_List::isUpperLower(int& index) {
 	// true if upper
 	if (index > size / 2) {
 		index = (size - index) + 1;
@@ -214,8 +210,8 @@ bool doubly::Linked_List::isUpperLower(int& index) {
 		return 0;
 }
 
-doubly::Node* doubly::Linked_List::find_node(int index) {
-	doubly::Node* current_node{ NULL };
+double_node::Node* linked_list::doubly::Linked_List::find_node(int index) {
+	double_node::Node* current_node{ NULL };
 	if (index > size || index < 0)
 		return NULL;
 
@@ -236,8 +232,7 @@ doubly::Node* doubly::Linked_List::find_node(int index) {
 	return current_node;
 }
 
-
-void doubly::Linked_List::push(doubly::Node* new_node) {
+void linked_list::doubly::Linked_List::push(double_node::Node* new_node) {
 	
 	if (isEmpty()) {
 		head = new_node;
@@ -249,7 +244,7 @@ void doubly::Linked_List::push(doubly::Node* new_node) {
 	size++;
 }
 
-void doubly::Linked_List::push_back(doubly::Node* new_node) {
+void linked_list::doubly::Linked_List::push_back(double_node::Node* new_node) {
 	if (isEmpty()) {
 		head = new_node;
 		tail = new_node;
@@ -259,10 +254,10 @@ void doubly::Linked_List::push_back(doubly::Node* new_node) {
 	size++;
 }
 
-bool doubly::Linked_List::insert(int index, const type data) {
-	doubly::Node* new_node{ new Node(data) };
-	doubly::Node* current_node{ nullptr };
-	doubly::Node* prev_node{ nullptr };
+bool linked_list::doubly::Linked_List::insert(int index, const type data) {
+	double_node::Node* new_node{ new double_node::Node(data) };
+	double_node::Node* current_node{ nullptr };
+	double_node::Node* prev_node{ nullptr };
 
 	if (size - index > 1)
 		return 0;
@@ -291,8 +286,8 @@ bool doubly::Linked_List::insert(int index, const type data) {
 	return 1;
 }
 
-bool doubly::Linked_List::insert(const type data) {
-	doubly::Node* new_node{ new Node(data) };
+bool linked_list::doubly::Linked_List::insert(const type data) {
+	double_node::Node* new_node{ new double_node::Node(data) };
 	if (isEmpty()) {
 		push(new_node);
 		return 1;
@@ -303,8 +298,8 @@ bool doubly::Linked_List::insert(const type data) {
 		head = new_node;
 		return 1;
 	}
-	doubly::Node* prev_node{ head };
-	doubly::Node* current_node{ head->get_next() };
+	double_node::Node* prev_node{ head };
+	double_node::Node* current_node{ head->get_next() };
 
 	while (current_node != NULL) {
 		if (current_node->get_data() > data)
@@ -322,18 +317,18 @@ bool doubly::Linked_List::insert(const type data) {
 
 }
 
-void doubly::Linked_List::front(type& value) {
-	doubly::Node* node{ head };
+void linked_list::doubly::Linked_List::front(type& value) {
+	double_node::Node* node{ head };
 	value = node->get_data();
 }
 
-void doubly::Linked_List::back(type& value) {
-	doubly::Node* node{ tail };
+void linked_list::doubly::Linked_List::back(type& value) {
+	double_node::Node* node{ tail };
 	value = node->get_data();
 }
 
-bool doubly::Linked_List::value_at(int index, type& value) {
-	doubly::Node* current_node{ NULL };
+bool linked_list::doubly::Linked_List::value_at(int index, type& value) {
+	double_node::Node* current_node{ NULL };
 	
 	if (isEmpty())
 		return 0;
@@ -346,8 +341,8 @@ bool doubly::Linked_List::value_at(int index, type& value) {
 	return 1;
 }
 
-void doubly::Linked_List::pop_front() {
-	doubly::Node* node{ head };
+void linked_list::doubly::Linked_List::pop_front() {
+	double_node::Node* node{ head };
 
 	if (size == 1) {
 		head = NULL;
@@ -363,8 +358,8 @@ void doubly::Linked_List::pop_front() {
 	delete node;
 }
 
-void doubly::Linked_List::pop_back() {
-	doubly::Node* node{ tail };
+void linked_list::doubly::Linked_List::pop_back() {
+	double_node::Node* node{ tail };
 	if (size == 1) {
 		head = NULL;
 		tail = NULL;
@@ -377,13 +372,13 @@ void doubly::Linked_List::pop_back() {
 	delete node;
 }
 
-bool doubly::Linked_List::remove(int index) {
+bool linked_list::doubly::Linked_List::remove(int index) {
 	if (isEmpty() || index > size || index < 0)
 		return 0;
 
-	doubly::Node* current_node{ NULL };
-	doubly::Node* prev_node{ NULL };
-	doubly::Node* next_node{ NULL };
+	double_node::Node* current_node{ NULL };
+	double_node::Node* prev_node{ NULL };
+	double_node::Node* next_node{ NULL };
 
 	if (index == 1){
 		pop_front();
@@ -407,10 +402,140 @@ bool doubly::Linked_List::remove(int index) {
 	return 1;
 }
 
-void doubly::Linked_List::print() {
+void linked_list::doubly::Linked_List::print() {
 
-	doubly::Node* node{ nullptr };
+	double_node::Node* node{ nullptr };
 	for (int count{ 1 }; count <= size; count++) {
 		node = find_node(count);
 	}
+}
+
+// !!! Doubly !!!
+
+// !!! Queue !!!
+linked_list::queue::queue::queue() {
+	head = NULL;
+}
+
+bool linked_list::queue::queue::dequeue(type& data) {
+	
+	if (isEmpty())
+		return 0;
+	single_node::Node* first_node{ head };
+
+	if (get_size() == 1) {
+		data = first_node->get_data();
+		head = NULL;
+		delete first_node;
+		return 1;
+	}
+
+	data = first_node->get_data();
+	head = first_node->get_next();
+
+	delete first_node;
+	size--;
+	
+	return 1;
+}
+
+bool linked_list::queue::queue::enqueue(const type data) {
+	single_node::Node* new_node(new single_node::Node(data));
+	single_node::Node* current_node{ nullptr };
+	if (!new_node)
+		return 0;
+
+	if (isEmpty()) {
+		head = new_node;
+		size++;
+		return 1;
+	}
+
+	for (int i{ 1 }; i < size; i++)
+		current_node = current_node->get_next();
+	
+	current_node->set_next(new_node);
+	size++;
+	
+	return 1;
+}
+
+bool linked_list::queue::queue::isEmpty() {
+	if (size == 0)
+		return 1;
+	return 0;
+}
+
+int linked_list::queue::queue::get_size() {
+	return size;
+}
+
+bool linked_list::queue::queue::peek(type& data) {
+	if (isEmpty())
+		return 0;
+
+	data = head->get_data();
+	
+	return 1;
+}
+
+
+linked_list::stack::stack::stack() {
+	head = NULL;
+}
+
+bool linked_list::stack::stack::push(const type data) {
+	single_node::Node* new_node{ new single_node::Node(data) };
+	if (!new_node)
+		return 0;
+	if (isEmpty()) {
+		head = new_node;
+		return 1;
+	}
+
+	new_node->set_next(head);
+	head = new_node;
+	
+	size++;
+	return 1;
+}
+
+bool linked_list::stack::stack::pop(type& data) {
+	if (isEmpty())
+		return 0;
+	
+	single_node::Node* node{ head };
+	data = node->get_data();
+
+	if (get_size() == 1) {
+		head = NULL;
+		delete node;
+		size--;
+		return 0;
+	}
+
+	head = node->get_next();
+	delete node;
+	size--;
+
+	return 1;
+}
+
+bool linked_list::stack::stack::peek(type& data) {
+	if (isEmpty())
+		return 0;
+
+	data = head->get_data();
+
+	return 1;
+}
+
+bool linked_list::stack::stack::isEmpty() {
+	if (size == 0)
+		return 1;
+	return 0;
+}
+
+int linked_list::stack::stack::get_size() {
+	return size;
 }

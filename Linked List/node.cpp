@@ -1,54 +1,54 @@
-#include "node.h"
+#include "node.hpp"
 #include <cstdlib>
 
-singly::Node::Node(const type data) {
+single_node::Node::Node(const type data) {
 	this->data = data;
 	next = NULL;
 }
 
-type singly::Node::get_data() {
+type single_node::Node::get_data() {
 	return data;
 }
 
-singly::Node* singly::Node::get_next() {
+single_node::Node* single_node::Node::get_next() {
 	return next;
 }
 
-void singly::Node::set_data(const type data) {
+void single_node::Node::set_data(const type data) {
 	this->data = data;
 }
 
-void singly::Node::set_next(Node* next) {
+void single_node::Node::set_next(Node* next) {
 	this->next = next;
 }
 
 
-doubly::Node::Node(const type data) {
+double_node::Node::Node(const type data) {
 	this ->data = data;
 	next = NULL;
 	previous = NULL;
 }
 
-type doubly::Node::get_data() {
+type double_node::Node::get_data() {
 	return data;
 }
 
-doubly::Node* doubly::Node::get_next() {
+double_node::Node* double_node::Node::get_next() {
 	return next;
 }
 
-doubly::Node* doubly::Node::get_prev() {
+double_node::Node* double_node::Node::get_prev() {
 	return previous;
 }
 
-void doubly::Node::set_data(const type data) {
+void double_node::Node::set_data(const type data) {
 	this->data = data;
 }
-void doubly::Node::set_next(Node* next) {
+void double_node::Node::set_next(Node* next) {
 	this->next = next;
 }
 
-void doubly::Node::set_prev(Node* prev)
+void double_node::Node::set_prev(Node* prev)
 {
 	this->previous = prev;
 }
