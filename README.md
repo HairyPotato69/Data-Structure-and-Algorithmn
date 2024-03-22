@@ -55,5 +55,8 @@ _basic linked list_
 6. Retrieve node
    - find node: find node based on the index given
 7. Reverse: reverses the list
+## Queue
+It is essentially linked list but with restrictions.
+![Basic queue](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/queue.png)
 
 # Algorithms
