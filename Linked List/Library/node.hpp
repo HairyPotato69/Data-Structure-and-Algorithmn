@@ -4,7 +4,7 @@
 
 using type = int;
 
-namespace singly {
+namespace single_node {
 
 	class Node {
 
@@ -21,7 +21,7 @@ namespace singly {
 
 }
 
-namespace doubly {
+namespace double_node {
 	class Node {
 	private:
 		type data{};
