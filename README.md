@@ -9,10 +9,10 @@ This repository serves as a reference for DSA.
 **Main** branch will store concepts and theories on DSA. Refer to **Python** branch for coding in `.py` format, **C++** branch is for coding in `.cpp` format.
 
 # Topics
-- ![Data Structures](#data-structures)
-  - ![Linked list](#linked-list)
-  - ![Queue](#queue)
-  - ![Stack](#stack)
+- [Data Structures](#data-structures)
+  - [Linked list](#linked-list)
+  - [Queue](#queue)
+  - [Stack](#stack)
 
 # Data Structures
 ## Linked List
