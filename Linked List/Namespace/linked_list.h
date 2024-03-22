@@ -1,7 +1,7 @@
 #pragma once
 #ifndef linked_list_type
 #define linked_list_type
-#include "node.h"
+#include "node.hpp"
 #include <cstdlib> // #include <stdlib.h>
 
 
