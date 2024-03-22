@@ -1,4 +1,4 @@
-#include "node.h"
+#include "node.hpp"
 #include <cstdlib>
 
 Node::Node(const type data) {
