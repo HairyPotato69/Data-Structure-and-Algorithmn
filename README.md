@@ -8,7 +8,10 @@ This repository serves as a reference for DSA.
 
 **Main** branch will store concepts and theories on DSA. Refer to **Python** branch for coding in `.py` format, **C++** branch is for coding in `.cpp` format.
 
-# Data Strucutures
+# Topics
+- ![Data Structures](#data-structures)
+
+# Data Structures
 ## Linked List
 It is the fundamental data structure and should be mastered before venturing into other structures. Once this is mastered, you think think of other structures as linked list but with _extra steps_.
 ![basic linked list](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/linked%20list.png)
