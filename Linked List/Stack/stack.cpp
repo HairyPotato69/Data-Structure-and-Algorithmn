@@ -1,4 +1,4 @@
-#include "satck.hpp"
+#include "stack.hpp"
 #include <iostream>
 
 stack::stack() {
