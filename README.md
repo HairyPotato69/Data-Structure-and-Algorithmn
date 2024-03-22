@@ -55,8 +55,25 @@ _basic linked list_
 6. Retrieve node
    - find node: find node based on the index given
 7. Reverse: reverses the list
+
 ## Queue
-It is essentially linked list but with restrictions.
 ![Basic queue](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/queue.png)
+It is essentially linked list but with restrictions. Queue has FIFO (_first in first out_) and LILO (_last in last out_) characteristics. 
+For example, the first data your insert into a queue will also be the first data to leave the queue. 
+To put into perspective, imagine a queue at a cinema. The first person to enter the queue will be the first to enter/leave. _simple queue_ 
+
+**Types of Queue**
+1. Simple Queue
+2. Circular Queue
+3. Double Ended Queue
+4. Priority Queue
+   - Ascending Priority Queue
+   - Descending Priority Queue
+
+**Basic operations**
+1. Enqueue: Inserting node into the end of the queue 
+2. Dequeue: Removing the node at the front of the queue and return its value
+3. isEmpty: Determine if the queue is empty
+4. Peek: Retrieving the value of the front node without removing it
 
 # Algorithms
