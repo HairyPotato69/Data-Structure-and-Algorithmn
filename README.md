@@ -82,6 +82,7 @@ To put into perspective, imagine a queue at a cinema. The first person to enter 
 1. Enqueue: Inserting node into the end of the queue 
 ![Enqueue](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/queue%20insert.png)
 2. Dequeue: Removing the node at the front of the queue and return its value
+![Dequeue](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/dequeue.png)
 3. isEmpty: Determine if the queue is empty
 4. Peek: Retrieving the value of the front node without removing it
 
