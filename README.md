@@ -14,7 +14,8 @@ This repository serves as a reference for DSA.
   - [Queue](#queue)
   - [Stack](#stack)
   - [Tree](#tree)
-- [Algorithms](#Algorithms)
+- [Algorithms](#algorithms)
+   - [Recursion](#recursion)
 
 # Data Structures
 ## Linked List
@@ -93,13 +94,16 @@ For example, the first data you insert into a stack will be the last data to lea
 To put into perspective, imagine a pile of clothes. You add clothes to the top of the stack (_most recently added data/last in_) and take clothes from the top of the stack (_first out_)
 
 **Basic operations**
-1. push: Adding node to the top of the stack
-![Dequeue](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/dequeue.png)
-2. pop: Removing the node from the top of the stack and return its value
-3. top: Retrieving the value of the top most node of the stack without removing it
+1. Push: Adding node to the top of the stack
+![Push](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/push.png)
+2. Pop: Removing the node from the top of the stack and return its value
+![Pop](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/Linked%20list/pop.png)
+3. Top: Retrieving the value of the top most node of the stack without removing it
 4. isEmpty: Determine if the stack is empty
 5. size: Determine the number of nodes in the stack
 
 ## Tree
 
 # Algorithms
+## Recursion
+
