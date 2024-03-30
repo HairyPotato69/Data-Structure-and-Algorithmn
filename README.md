@@ -137,4 +137,9 @@ int factorial(int n){
 The factorial of a number $n!$ goes like this:
 $$(n-1)(n-2)(n-3).....(3)(2)(1)$$
 From that sequence of numbers, we can tell that the calculation ends when the number reaches 1. <br>
-We utilised that as our base case in the function. (`n>0`)
+We utilised that as our base case in the function. (`n>0`) <br>
+As long as the digit is greater than 0 (1 and above), the function will keep calling itself and multiply itself with the next number in line<br>
+`n * factorial(n-1)` <br>
+Once the value of $n$ reaches one, the function will begin retracing itself back to the start; hence, the `return` keyword in `line 3`<br>
+The `return 1` returns the value of 1 back when the number reaches 1. 
+![factorial](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/recursive%20factorial.png)
