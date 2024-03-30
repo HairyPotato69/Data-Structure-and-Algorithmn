@@ -44,6 +44,7 @@ double_node::Node* double_node::Node::get_prev() {
 void double_node::Node::set_data(const type data) {
 	this->data = data;
 }
+
 void double_node::Node::set_next(Node* next) {
 	this->next = next;
 }
@@ -51,4 +52,48 @@ void double_node::Node::set_next(Node* next) {
 void double_node::Node::set_prev(Node* prev)
 {
 	this->previous = prev;
+}
+
+tree_node::Node::Node(const type data) {
+	this->data = data;
+	root = NULL;
+	ancestor = NULL;
+	left = NULL;
+	right = NULL;
+}
+
+type tree_node::Node::get_data() {
+	return data;
+}
+
+tree_node::Node* tree_node::Node::get_root() {
+	return root;
+}
+
+tree_node::Node* tree_node::Node::get_ancestor() {
+	return ancestor;
+}
+
+tree_node::Node* tree_node::Node::get_left() {
+	return left;
+}
+
+tree_node::Node* tree_node::Node::get_right() {
+	return right;
+}
+
+void tree_node::Node::set_data(const type data) {
+	this->data = data;
+}
+
+void tree_node::Node::set_root(Node* root){
+	this->root = root;
+}
+
+void tree_node::Node::set_left(Node* left) {
+	this->left = left;
+}
+
+void tree_node::Node::set_right(Node* right) {
+	this->right = right;
 }

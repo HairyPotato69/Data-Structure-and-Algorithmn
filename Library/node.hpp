@@ -38,4 +38,27 @@ namespace double_node {
 	};
 }
 
+namespace tree_node {
+	class Node {
+	private:
+		type data{};
+		Node* root{};
+		Node* ancestor{};
+		Node* left{};
+		Node* right{};
+	public:
+		Node(const type data);
+
+		type get_data();
+		Node* get_root();
+		Node* get_ancestor();
+		Node* get_left();
+		Node* get_right();
+		void set_data(const type data);
+		void set_root(Node* root);
+		void set_left(Node* left);
+		void set_right(Node* right);
+	};
+}
+
 #endif

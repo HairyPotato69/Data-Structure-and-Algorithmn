@@ -535,3 +535,64 @@ int linked_list::stack::stack::get_size() {
 	return size;
 }
 // !!! Stack !!!
+
+// !!! Trees !!!
+trees::TT::TT::TT() {
+	root = NULL;
+}
+bool trees::TT::TT::isEmpty() {
+	if (count == 0)
+		return 1;
+	return 0;
+}
+int trees::TT::TT::get_size() {
+	return count;
+}
+bool trees::TT::TT::insertLeaf(const type father,const type data) {
+	// create a new node to insert
+	tree_node::Node* new_leaf{ new tree_node::Node(data) };
+	// if the tree is empty 
+	if (isEmpty()) {
+		root = new_leaf;
+		count++;
+		return 1;
+	}
+	// insertLeaf2 will only return either 0 or 1
+	return insertLeaf2(root, father, new_leaf);
+}
+
+bool trees::TT::TT::insertLeaf2(tree_node::Node* root, const type father, tree_node::Node* son) {
+	// if the current node is an empty node ( you have reached the end) of the tree
+	if (root == NULL)
+		return 0;
+	// if the value in the node matches the value of the parent
+	if (root->get_data() == father) {
+		// check left first
+		if (root->get_left() == NULL) {
+			root->set_left(son);
+			count++;
+			// successful
+			return 1;
+		}
+		if (root->get_right() == NULL) {
+			root->set_right(son);
+			count++;
+			return 1;
+		}
+		// if both left and right has been occupied
+		return 0;
+	}
+	// if insertion is successful, you end the recursion
+	if(insertLeaf2(root->get_left(), father, son)) 
+		return 1;
+	// if its successful in one side, theres no need to check the other
+	return insertLeaf2(root->get_right(), father, son);
+}
+
+void trees::TT::TT::TreeT(tree_node::Node* leaf) {
+	if (isEmpty())
+		return;
+	TreeT(leaf->get_left());
+	std::cout << leaf->get_data();
+	TreeT(leaf->get_right());
+}

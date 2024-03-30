@@ -103,4 +103,29 @@ namespace linked_list {
 	}
 }
 
+namespace trees {
+	namespace TT{
+		class TT {
+		public:
+			tree_node::Node* root{};
+			int count{};
+		private:
+			TT();
+			bool isEmpty();
+			int get_size();
+			bool insertLeaf(const type father, const type data);
+			bool insertLeaf2(tree_node::Node* root, const type father, tree_node::Node* son);
+			void TreeT(tree_node::Node* leaf);
+		};
+	}
+	namespace BST {
+		class BST{
+		};
+	}
+	namespace AVL {
+		class AVL {
+		};
+	}
+}
+
 #endif // linked_list_type
