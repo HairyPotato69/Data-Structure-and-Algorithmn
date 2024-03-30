@@ -106,4 +106,29 @@ To put into perspective, imagine a pile of clothes. You add clothes to the top o
 
 # Algorithms
 ## Recursion
+Recursion is a technique where a function calls upon itself during an operation. 
+![Recursion](https://github.com/HairyPotato69/Data-Structure-and-Algorithm/blob/main/Images/recursion.png)
 
+**Why recursion?**
+Implementing recursion can help reduce the lines of complex code while making it easier to read. If a task is similar to its subtasks, recursion can come in handy. Recursion also has certain advantages in comparison to traditional iteration techniques. 
+
+**Why NOT recursion**
+In terms of memory and performance, recursion may be less efficient compared to iterative techniques. It may also lead to stack overflow errors.
+
+**When recursion?**
+When implement data structures such as trees. 
+
+**How recursion?**
+Recursions comprises of:
+1. Execution expressions
+2. Conditional statements
+   - When to end
+   - How long should it keep going
+
+```c++
+int recursion(int n){
+   if (n>0)
+      return n * recursion(n-1);
+   return 1;
+}
+```
