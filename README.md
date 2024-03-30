@@ -127,12 +127,14 @@ Recursions comprises of:
 
 *Code snippet: Recursion*
 ```c++
-int recursion(int n){
+int factorial(int n){
    if (n>0)
-      return n * recursion(n-1);
+      return n * factorial(n-1);
    return 1;
 }
 ```
-*Explanation*
+*Explanation* <br>
 The factorial of a number $n!$ goes like this:
 $$(n-1)(n-2)(n-3).....(3)(2)(1)$$
+From that sequence of numbers, we can tell that the calculation ends when the number reaches 1. <br>
+We utilised that as our base case in the function. (`n>0`)
