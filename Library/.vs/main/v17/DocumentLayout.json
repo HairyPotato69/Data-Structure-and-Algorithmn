@@ -1,7 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Linked List\\Library\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|solutionrelative:node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\data_structure.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|solutionrelative:data_structure.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\data_structure.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|solutionrelative:data_structure.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\node.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72D4B43C-B5B4-4EF3-9283-DE373C51B88B}|main.vcxproj|solutionrelative:node.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +39,67 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-30T05:29:43.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "data_structure.cpp",
+              "DocumentMoniker": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\data_structure.cpp",
+              "RelativeDocumentMoniker": "data_structure.cpp",
+              "ToolTip": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\data_structure.cpp",
+              "RelativeToolTip": "data_structure.cpp",
+              "ViewState": "AQIAAIEBAAAAAAAAAAAUwLABAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-30T05:29:55.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "node.cpp",
+              "DocumentMoniker": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\node.cpp",
+              "RelativeDocumentMoniker": "node.cpp",
+              "ToolTip": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\node.cpp",
+              "RelativeToolTip": "node.cpp",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-30T05:29:59.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "data_structure.hpp",
+              "DocumentMoniker": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\data_structure.hpp",
+              "RelativeDocumentMoniker": "data_structure.hpp",
+              "ToolTip": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\data_structure.hpp",
+              "RelativeToolTip": "data_structure.hpp",
+              "ViewState": "AQIAACQAAAAAAAAAAAAUwE8AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-30T05:29:01.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "node.hpp",
+              "DocumentMoniker": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\node.hpp",
+              "RelativeDocumentMoniker": "node.hpp",
+              "ToolTip": "D:\\Github\\DSA reference\\Data-Structure-and-Algorithmn\\Library\\node.hpp",
+              "RelativeToolTip": "node.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-30T05:28:49.925Z"
             }
           ]
         }
