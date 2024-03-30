@@ -18,7 +18,7 @@ bool stack::push(const type data) {
 	head = new_node;
 
 	size++;
-	return 1;
+	return 1; 
 }
 
 bool stack::pop(type& data) {
