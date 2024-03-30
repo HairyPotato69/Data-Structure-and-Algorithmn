@@ -125,6 +125,7 @@ Recursions comprises of:
    - When to end
    - How long should it keep going
 
+*Code snippet: Recursion*
 ```c++
 int recursion(int n){
    if (n>0)
@@ -132,3 +133,6 @@ int recursion(int n){
    return 1;
 }
 ```
+*Explanation*
+The factorial of a number $n!$ goes like this:
+$$(n-1)(n-2)(n-3).....(3)(2)(1)$$
