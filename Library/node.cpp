@@ -24,7 +24,7 @@ void single_node::Node::set_next(Node* next) {
 
 
 double_node::Node::Node(const type data) {
-	this ->data = data;
+	this->data = data;
 	next = NULL;
 	previous = NULL;
 }

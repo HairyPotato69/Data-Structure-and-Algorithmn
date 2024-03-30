@@ -2,12 +2,12 @@
 #include <iostream>
 
 // !!! Singly !!!
-linked_list::singly::Linked_List::Linked_List(){
+linked_list::singly::Linked_List::Linked_List() {
 	head = NULL;
 	tail = NULL;
 }
 
-int linked_list::singly::Linked_List::get_size(){
+int linked_list::singly::Linked_List::get_size() {
 	return size;
 }
 
@@ -23,8 +23,8 @@ single_node::Node* linked_list::singly::Linked_List::find_node(const int index) 
 		return NULL;
 
 	single_node::Node* current_node{ head };
-	
-	for (int count{ 1 }; count < index; count++) 
+
+	for (int count{ 1 }; count < index; count++)
 		current_node = current_node->get_next();
 
 	return current_node;
@@ -52,7 +52,7 @@ void linked_list::singly::Linked_List::push_back(single_node::Node* new_node) {
 		head = new_node;
 		tail = new_node;
 	}
-	
+
 	new_node->set_next(tail);
 	tail = new_node;
 	size++;
@@ -74,8 +74,8 @@ bool linked_list::singly::Linked_List::insert(int index, const type data) {
 		return 1;
 	}
 
-	single_node::Node* prev_node { find_node(index - 1) };
-	single_node::Node* next_node { prev_node->get_next() };
+	single_node::Node* prev_node{ find_node(index - 1) };
+	single_node::Node* next_node{ prev_node->get_next() };
 
 	prev_node->set_next(new_node);
 	new_node->set_next(next_node);
@@ -83,7 +83,7 @@ bool linked_list::singly::Linked_List::insert(int index, const type data) {
 	size++;
 
 	return 1;
- }
+}
 
 // This only works if the list has already been arranged in order
 bool linked_list::singly::Linked_List::insert(const type data) {
@@ -152,7 +152,7 @@ void linked_list::singly::Linked_List::pop_front() {
 	delete node;
 }
 
-bool linked_list::singly::Linked_List::remove(const int index){
+bool linked_list::singly::Linked_List::remove(const int index) {
 
 	if (isEmpty() || index < 0 || index > size)
 		return 0;
@@ -162,7 +162,7 @@ bool linked_list::singly::Linked_List::remove(const int index){
 		return 1;
 	}
 
-	single_node::Node* previous = find_node(index-1);
+	single_node::Node* previous = find_node(index - 1);
 	single_node::Node* node = previous->get_next();
 
 	previous->set_next(node->get_next());
@@ -233,7 +233,7 @@ double_node::Node* linked_list::doubly::Linked_List::find_node(int index) {
 }
 
 void linked_list::doubly::Linked_List::push(double_node::Node* new_node) {
-	
+
 	if (isEmpty()) {
 		head = new_node;
 		tail = new_node;
@@ -264,7 +264,7 @@ bool linked_list::doubly::Linked_List::insert(int index, const type data) {
 
 	if (isUpperLower(index))
 		current_node = find_node(index);
-	else 
+	else
 		current_node = find_node(index);
 
 	prev_node = current_node->get_prev();
@@ -321,7 +321,7 @@ void linked_list::doubly::Linked_List::back(type& value) {
 
 bool linked_list::doubly::Linked_List::value_at(int index, type& value) {
 	double_node::Node* current_node{ NULL };
-	
+
 	if (isEmpty())
 		return 0;
 	if (isUpperLower(index))
@@ -329,7 +329,7 @@ bool linked_list::doubly::Linked_List::value_at(int index, type& value) {
 	else
 		current_node = find_node(index);
 	value = current_node->get_data();
-	
+
 	return 1;
 }
 
@@ -372,7 +372,7 @@ bool linked_list::doubly::Linked_List::remove(int index) {
 	double_node::Node* prev_node{ NULL };
 	double_node::Node* next_node{ NULL };
 
-	if (index == 1){
+	if (index == 1) {
 		pop_front();
 		return 1;
 	}
@@ -382,7 +382,7 @@ bool linked_list::doubly::Linked_List::remove(int index) {
 	}
 	if (isUpperLower(index))
 		current_node = find_node(index);
-	else 
+	else
 		current_node = find_node(index);
 
 	prev_node = current_node->get_prev();
@@ -390,7 +390,7 @@ bool linked_list::doubly::Linked_List::remove(int index) {
 
 	prev_node->set_next(next_node);
 	next_node->set_prev(prev_node);
-	
+
 	return 1;
 }
 
@@ -410,7 +410,7 @@ linked_list::queue::queue::queue() {
 }
 
 bool linked_list::queue::queue::dequeue(type& data) {
-	
+
 	if (isEmpty())
 		return 0;
 	single_node::Node* first_node{ head };
@@ -427,7 +427,7 @@ bool linked_list::queue::queue::dequeue(type& data) {
 
 	delete first_node;
 	size--;
-	
+
 	return 1;
 }
 
@@ -445,10 +445,10 @@ bool linked_list::queue::queue::enqueue(const type data) {
 
 	for (int i{ 1 }; i < size; i++)
 		current_node = current_node->get_next();
-	
+
 	current_node->set_next(new_node);
 	size++;
-	
+
 	return 1;
 }
 
@@ -467,7 +467,7 @@ bool linked_list::queue::queue::peek(type& data) {
 		return 0;
 
 	data = head->get_data();
-	
+
 	return 1;
 }
 
@@ -490,7 +490,7 @@ bool linked_list::stack::stack::push(const type data) {
 
 	new_node->set_next(head);
 	head = new_node;
-	
+
 	size++;
 	return 1;
 }
@@ -498,7 +498,7 @@ bool linked_list::stack::stack::push(const type data) {
 bool linked_list::stack::stack::pop(type& data) {
 	if (isEmpty())
 		return 0;
-	
+
 	single_node::Node* node{ head };
 	data = node->get_data();
 
