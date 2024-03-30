@@ -107,7 +107,7 @@ To put into perspective, imagine a pile of clothes. You add clothes to the top o
 # Algorithms
 ## Recursion
 Recursion is a technique where a function calls upon itself during an operation. 
-![Recursion](https://github.com/HairyPotato69/Data-Structure-and-Algorithm/blob/main/Images/recursion.png)
+![Recursion](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/recursion.png)
 
 **Why recursion?**
 Implementing recursion can help reduce the lines of complex code while making it easier to read. If a task is similar to its subtasks, recursion can come in handy. Recursion also has certain advantages in comparison to traditional iteration techniques. 
