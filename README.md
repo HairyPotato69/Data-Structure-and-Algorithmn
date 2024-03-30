@@ -143,3 +143,4 @@ As long as the digit is greater than 0 (1 and above), the function will keep cal
 Once the value of $n$ reaches one, the function will begin retracing itself back to the start; hence, the `return` keyword in `line 3`<br>
 The `return 1` returns the value of 1 back when the number reaches 1. 
 ![factorial](https://github.com/HairyPotato69/Data-Structure-and-Algorithmn/blob/main/Images/recursive%20factorial.png)
+**Practices**: https://www.geeksforgeeks.org/recursion-practice-problems-solutions/?ref=lbp
