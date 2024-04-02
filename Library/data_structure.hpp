@@ -103,23 +103,49 @@ namespace linked_list {
 	}
 }
 
-namespace trees {
-	namespace TT{
+namespace tree {
+	namespace TT {
 		class TT {
 		public:
-			tree_node::Node* root{};
+			tree::Node* root{};
 			int count{};
 		private:
+			// 
 			TT();
 			bool isEmpty();
 			int get_size();
+			// When inserting, you have two functions
+			/*
+				One is to handle an empty tree
+				The other is for recursion
+			*/
 			bool insertLeaf(const type father, const type data);
-			bool insertLeaf2(tree_node::Node* root, const type father, tree_node::Node* son);
-			void TreeT(tree_node::Node* leaf);
+			bool insertLeaf2(tree::Node* root, const type father, tree::Node* son);
+			bool BFS();
+			void TreeT(tree::Node* leaf);
 		};
 	}
 	namespace BST {
-		class BST{
+		class BST {
+		public:
+			tree::Node* root{};
+			int count{};
+		private:
+			BST();
+			bool isEmpty();
+			int get_size();
+			// when inserting, you have two functions
+			/*
+				One is to handle an empty tree
+				The other is for recursion
+			*/
+			bool insertLeaf(const type data);
+			bool insertLeaf2(tree::Node* root, tree::Node* son);
+			void BSTT(tree::Node* leaf, const type data);
+			bool removeLeaf(const type data);
+			bool removeLeaf2(tree::Node* previous, tree::Node* current, const type data);
+			bool case2(tree::Node* previous, tree::Node* current);
+			bool case3(tree::Node* current);
 		};
 	}
 	namespace AVL {

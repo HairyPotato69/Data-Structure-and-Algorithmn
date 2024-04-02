@@ -537,20 +537,20 @@ int linked_list::stack::stack::get_size() {
 // !!! Stack !!!
 
 // !!! Trees !!!
-trees::TT::TT::TT() {
+tree::TT::TT::TT() {
 	root = NULL;
 }
-bool trees::TT::TT::isEmpty() {
+bool tree::TT::TT::isEmpty() {
 	if (count == 0)
 		return 1;
 	return 0;
 }
-int trees::TT::TT::get_size() {
+int tree::TT::TT::get_size() {
 	return count;
 }
-bool trees::TT::TT::insertLeaf(const type father,const type data) {
+bool tree::TT::TT::insertLeaf(const type father, const type data) {
 	// create a new node to insert
-	tree_node::Node* new_leaf{ new tree_node::Node(data) };
+	tree::Node* new_leaf{ new tree::Node(data) };
 	// if the tree is empty 
 	if (isEmpty()) {
 		root = new_leaf;
@@ -558,10 +558,12 @@ bool trees::TT::TT::insertLeaf(const type father,const type data) {
 		return 1;
 	}
 	// insertLeaf2 will only return either 0 or 1
-	return insertLeaf2(root, father, new_leaf);
+	insertLeaf2(root, father, new_leaf);
+	count++;
+	return 1;
 }
 
-bool trees::TT::TT::insertLeaf2(tree_node::Node* root, const type father, tree_node::Node* son) {
+bool tree::TT::TT::insertLeaf2(tree::Node* root, const type father, tree::Node* son) {
 	// if the current node is an empty node ( you have reached the end) of the tree
 	if (root == NULL)
 		return 0;
@@ -583,16 +585,162 @@ bool trees::TT::TT::insertLeaf2(tree_node::Node* root, const type father, tree_n
 		return 0;
 	}
 	// if insertion is successful, you end the recursion
-	if(insertLeaf2(root->get_left(), father, son)) 
+	if (insertLeaf2(root->get_left(), father, son))
 		return 1;
 	// if its successful in one side, theres no need to check the other
 	return insertLeaf2(root->get_right(), father, son);
 }
 
-void trees::TT::TT::TreeT(tree_node::Node* leaf) {
+bool tree::TT::TT::BFS() {
+	if (isEmpty())
+		return 0;
+	int data{};
+	tree::Node* head{ root };
+	linked_list::queue::queue q{};
+	q.enqueue(head->get_data());
+
+	while (q.isEmpty() == 0) {
+		q.dequeue(data);
+		std::cout << data << '\n';
+		if (head->get_left() != NULL)
+			q.enqueue(head->get_left()->get_data());
+		if (head->get_right() != NULL)
+			q.enqueue(head->get_right()->get_data());
+		if (data == head->get_left()->get_data())
+			head = head->get_left();
+		if (data == head->get_right()->get_data())
+			head = head->get_right();
+		else
+			head = head->get_ancestor();
+	}
+	return 1;
+}
+
+// Tree traversal
+void tree::TT::TT::TreeT(tree::Node* leaf) {
 	if (isEmpty())
 		return;
 	TreeT(leaf->get_left());
 	std::cout << leaf->get_data();
 	TreeT(leaf->get_right());
+}
+
+// Binary search trees
+tree::BST::BST::BST() {
+	root = NULL;
+}
+
+int tree::BST::BST::get_size() {
+	return count;
+}
+bool tree::BST::BST::isEmpty() {
+	if (count == 0)
+		return 1;
+	return 0;
+}
+
+void tree::BST::BST::BSTT(tree::Node* leaf, const type data) {
+	if (leaf == NULL)
+		return;
+	if (leaf->get_data() > data)
+		BSTT(leaf->get_left(), data);
+	else BSTT(leaf->get_right(), data);
+}
+
+bool tree::BST::BST::insertLeaf(const type data) {
+	tree::Node* new_node{ new tree::Node(data) };
+	if (isEmpty()) {
+		root = new_node;
+		count++;
+		return 1;
+	}
+
+	insertLeaf2(root, new_node);
+	count++;
+	return 1;
+}
+
+bool tree::BST::BST::insertLeaf2(tree::Node* root, tree::Node* son) {
+	// There is no need to check if root == NULL here 
+	// because the value will be inserted with there is available space
+	// there is also no ancestor for us to check
+	if (root->get_data() > son->get_data()) {
+		// keeps going to the left since its smaller
+		if (root->get_left() == NULL)
+			root->set_left(son);
+		else insertLeaf2(root->get_left(), son);
+	}
+	else {
+		if (root->get_right() == NULL)
+			root->set_right(son);
+		else insertLeaf2(root->get_right(), son);
+	}
+}
+
+bool tree::BST::BST::removeLeaf(const type data) {
+	if (isEmpty())
+		return 0;
+	return removeLeaf2(root, root, data);
+}
+// previous is the father you want to keep track off
+// current is the node you want to delete
+bool tree::BST::BST::removeLeaf2(tree::Node* previous, tree::Node* current, const type data) {
+	// case 1 - both empty
+	// case 2 - one side empty
+	// case 3 - both side occupied
+	// Case 1 + case 2
+	if (current == NULL)
+		return 0;
+	if (current->get_data() == data) {
+		if (current->get_left() || current->get_right() != NULL)
+			case2(previous, current);
+		else
+			case3(current);
+		count--;
+		return 1;
+	}
+	if (current->get_data() > data)
+		removeLeaf2(current, current->get_left(), data);
+	else removeLeaf2(current, current->get_right(), data);
+}
+
+bool tree::BST::BST::case2(tree::Node* previous, tree::Node* current) {
+	if (previous == current) {
+		if (current->get_left() != NULL)
+			previous = current->get_left();
+		else
+			previous = current->get_right();
+	}
+	if (previous->get_left() == current) {
+		if (current->get_left() != NULL)
+			previous->set_left(current->get_left());
+		else
+			previous->set_left(current->get_right());
+	}
+	else {
+		if (current->get_left() != NULL)
+			previous->set_right(current->get_left());
+		else
+			previous->set_right(current->get_right());
+	}
+	delete current;
+	return 1;
+}
+
+bool tree::BST::BST::case3(tree::Node* current) {
+	tree::Node* child{ nullptr };
+	tree::Node* father{ nullptr };
+	// always look for the right of the node you want to delete
+	child = father = current->get_right();
+	while (child->get_left() != NULL) {
+		father = child;
+		child = child->get_left();
+	}
+	// replacing data
+	current->set_data(child->get_data());
+	// special case
+	if (child == father) current->set_right(child->get_right());
+	// normal case -> replacing broken connection
+	else father->set_left(child->get_right());
+	return 1;
 }

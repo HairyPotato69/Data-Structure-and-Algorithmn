@@ -38,7 +38,7 @@ namespace double_node {
 	};
 }
 
-namespace tree_node {
+namespace tree {
 	class Node {
 	private:
 		type data{};
